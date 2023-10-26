@@ -40,7 +40,7 @@ def find_multiple_deliveries(parcels)
     addressee = "#{parcel.addressee}"
     addresses[addressee] += 1
   end
-  addresses
+  addresses.select{ |_, count| count > 1}
 end
 
 city = 'Kyiv'
@@ -54,7 +54,5 @@ puts result[1].to_s
 
 result = find_multiple_deliveries(array_of_parcels)
 result.each do |addressee, count|
-  if count > 1
     puts "#{count} parcels were sent to #{addressee} "
-  end
 end
