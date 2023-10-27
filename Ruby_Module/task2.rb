@@ -13,10 +13,6 @@ class Book
     @binding = binding
   end
 
-  def publication
-    @publication
-  end
-
   def has_author?(author_name)
     authors.include?(author_name)
   end
@@ -45,7 +41,6 @@ class BooksList
       @books << Book.new(7, 'The Catcher in the Rye', 'J.D. Salinger', 'Bloomsbury Publishing ',2006,344,345,'hardcover')
       @books << Book.new(8, 'Animal Farm', 'George Orwell', 'Hachette UK',2008,754,654,'paperback')
       @books << Book.new(9, 'Neverwhere', ['Neil Gaiman','Lenny Henry'], 'Oxford University Press',2008,433,345,'hardcover')
-
     end
 
   def find_books_by_author( author_name)
