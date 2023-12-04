@@ -84,9 +84,7 @@ class Contacts
         else
           merged_contact_phone =  "#{contact1.phone} & #{contact2.phone}"
         end
-
-
-
+        
         if contact1.is_a?(EmailContact) && contact2.is_a?(EmailContact)
           merged_contact_email = "#{contact1.email} & #{contact2.email}"
         end
@@ -143,8 +141,5 @@ class Contacts
       end
 
       end
-  end
-  def merge_non_empty(value1, value2)
-    value1.to_s.empty? ? value2 : value1
   end
 end
