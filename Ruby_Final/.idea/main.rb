@@ -111,8 +111,8 @@ class Contacts
           end
         end
 
-        if( merged_contact_email != null)
-          if( merged_contact_nickname != null)
+        if( merged_contact_email != "")
+          if( merged_contact_nickname != "")
             merged_contact = SocialMediaContact.new(
               "#{contact1.name}",
               "#{contact1.surname}",
